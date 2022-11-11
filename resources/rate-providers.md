@@ -1,5 +1,9 @@
 # Rate Providers
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## Overview
 
 Rate Providers are contracts that provide an exchange rate between two assets. These exchange rates can come from any on-chain source, whether that may be an oracle, a ratio of queryable balances, or another calculation.
@@ -16,11 +20,11 @@ You will want to use `rateProvider`s for all assets in your pool when each asset
 
 ### Some Assets
 
-You will want to use `rateProvider`s for some assets in your pool when you have rates that directly convert between the assets. If we have tokens A and B and a rate provider that gives the price of A with respect to B, then the `rateProvider` corresponding to token A would get the A:B price feed, and the `rateProvider` corresponding to token B would be the zero address.&#x20;
+You will want to use `rateProvider`s for some assets in your pool when you have rates that directly convert between the assets. If we have tokens A and B and a rate provider that gives the price of A with respect to B, then the `rateProvider` corresponding to token A would get the A:B price feed, and the `rateProvider` corresponding to token B would be the zero address.
 
 ### None of the Assets
 
-You will have no `rateProvider`s in your pool when your tokens are price-pegged to each other. For example, a pool with `USDC`, `USDT`, and `DAI` would have all `rateProvider`s set to the zero address since the exchange rate between those tokens is 1.&#x20;
+You will have no `rateProvider`s in your pool when your tokens are price-pegged to each other. For example, a pool with `USDC`, `USDT`, and `DAI` would have all `rateProvider`s set to the zero address since the exchange rate between those tokens is 1.
 
 ## Examples
 

@@ -1,5 +1,9 @@
 # Swaps
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 Swaps are a cornerstone of any exchange, and Balancer has a few types for different purposes.
 
 {% hint style="info" %}
@@ -20,7 +24,7 @@ You'll want to use **Single Swaps** when you're making a trade between two token
 
 ## What kind of swap should I be using?
 
-In most cases, you'll want to use **Batch Swaps**. The only time you would want to use a Single Swap is when you're making a trade between just two tokens in one pool. **Executing multiple Single Swaps in a single transaction is inefficient and should instead be batched**.&#x20;
+In most cases, you'll want to use **Batch Swaps**. The only time you would want to use a Single Swap is when you're making a trade between just two tokens in one pool. **Executing multiple Single Swaps in a single transaction is inefficient and should instead be batched**.
 
 ![Sample gas costs for trades executed through multiple weighted pools](<../../.gitbook/assets/Screen Shot 2021-10-05 at 8.16.12 AM (1).png>)
 

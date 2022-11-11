@@ -1,5 +1,9 @@
 # Smart Order Router
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## Summary
 
 {% hint style="info" %}
@@ -69,13 +73,12 @@ Step 2.3) finds the `swapAmounts` that will maximize the returns given an initia
 
 `iterateSwapAmountsApproximation()` takes as inputs `swapAmounts` and `bestPathIds` and is expected to find new `swapAmounts` that have spot prices after swap as close as possible.
 
-To help illustrate this, let's start with two paths (1 and 2) and initial `swapAmounts` equal to $$A_i$$ and $$A_2$$ . Remember that always the sum of the individual amounts is `targetAmountSwap`.&#x20;
+To help illustrate this, let's start with two paths (1 and 2) and initial `swapAmounts` equal to $$A_i$$ and $$A_2$$ . Remember that always the sum of the individual amounts is `targetAmountSwap`.
 
 The objective is to find a target spot price (`targetSP`) and $$A'_1$$ and $$A'_2$$ . such that:
 
 $$
-SPaA_1(A_1) =SPaA_2(A_2)= targetSP \\
-A_1'+A_2' = A_1+A_2 = A_T
+SPaA_1(A_1) =SPaA_2(A_2)= targetSP \\ A_1'+A_2' = A_1+A_2 = A_T
 $$
 
 To help the visualization, this is what we are looking to achieve:
@@ -87,8 +90,7 @@ To calculate a candidate for `targetSP` we need to use the derivatives of $$SPaS
 Using simple trigonometry we can say that:
 
 $$
-SPaS_1(A_1)-targetSP = SPaS_1'(A_1)\cdot(A_1'-A_1)\\
-SPaS_2(A_2)-targetSP = SPaS_2'(A_2)\cdot(A_2'-A_2)
+SPaS_1(A_1)-targetSP = SPaS_1'(A_1)\cdot(A_1'-A_1)\\ SPaS_2(A_2)-targetSP = SPaS_2'(A_2)\cdot(A_2'-A_2)
 $$
 
 The solution for this system of equations is:

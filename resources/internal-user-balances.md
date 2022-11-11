@@ -1,5 +1,9 @@
 # Internal User Balances
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## Overview
 
 Similar to how the Vault keeps track of what tokens are in a pool, the Vault can also maintain balances for users or any other smart contract. Balances can be deposited to, withdrawn from, and transferred. When utilizing internal balances in Balancer transactions (swap/join/trade), gas costs are reduced since there are fewer (or no) ERC20 tokens transferred and everything is handled by the Vault's bookkeeping.
@@ -50,5 +54,5 @@ This explanation is copied for convenience from the original [UserBalanceOpKind 
       it to the recipient as ETH. Emits an `InternalBalanceChanged` event.
 * `TRANSFER_INTERNAL`
   * Transfers tokens from the Internal Balance of the `sender` account to the Internal Balance of `recipient`. Reverts if the ETH sentinel value (the zero address) is passed. Emits an `InternalBalanceChanged` event.
-* `TRANSFER_EXTERNAL`&#x20;
+* `TRANSFER_EXTERNAL`
   * Transfers tokens from `sender` to `recipient`, using the Vault's ERC20 allowance. This is typically used by relayers, as it lets them reuse a user's Vault allowance. Reverts if the ETH sentinel value (the zero address) is passed. Emits an `ExternalBalanceTransfer` event.

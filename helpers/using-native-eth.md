@@ -1,6 +1,10 @@
 # Using Native ETH
 
 {% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
+{% hint style="info" %}
 This article discusses how the Vault can wrap ETH to WETH. While this concept applies to the native assets on other EVM compatible chains (ex. MATIC on Polygon), this article will refer to native assets as ETH and their wrapped counterparts as WETH.
 {% endhint %}
 
@@ -34,7 +38,7 @@ When joining or exiting a pool, you have to construct a `JoinPoolRequest` or `Ex
 address[] assets
 ```
 
-As you'll find in the documentation for [Joins and Exits](../resources/joins-and-exits/), this array must be sorted numerically; there is a caveat here though. If you wish to join with or exit to Native ETH, you need to **order the array** **as if you're dealing with WETH**. **** Note that it is not possible to combine ETH and WETH in the same join/exit; any excess ETH will be sent back to the caller (not the sender, which is important for relayers).
+As you'll find in the documentation for [Joins and Exits](../resources/joins-and-exits/), this array must be sorted numerically; there is a caveat here though. If you wish to join with or exit to Native ETH, you need to **order the array** **as if you're dealing with WETH**. \*\*\*\* Note that it is not possible to combine ETH and WETH in the same join/exit; any excess ETH will be sent back to the caller (not the sender, which is important for relayers).
 
 #### Correctly Ordered Example with WETH
 

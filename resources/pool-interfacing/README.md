@@ -1,12 +1,16 @@
 # Pool Interfacing
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## Overview
 
-Since there are many different pool types, it's important to note the differences between them when interfacing with Balancer. Some pool use different pricing equations, some have dynamic pricing, and some might have swaps disabled periodically.&#x20;
+Since there are many different pool types, it's important to note the differences between them when interfacing with Balancer. Some pool use different pricing equations, some have dynamic pricing, and some might have swaps disabled periodically.
 
 ## `poolId`s
 
-If you want to interface with a pool, you'll first need to know its `poolId`. The `poolId` is a unique identifier, the first portion of which is the pool's contract address. For example, the pool with the id `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014` has a contract address of `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56`.&#x20;
+If you want to interface with a pool, you'll first need to know its `poolId`. The `poolId` is a unique identifier, the first portion of which is the pool's contract address. For example, the pool with the id `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014` has a contract address of `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56`.
 
 You can get a `poolId` from:
 
@@ -46,7 +50,7 @@ Swap fees are stored at the pool level. To get a pool's swap fee, call:
 pool.getSwapFeePercentage()
 ```
 
-Values are returned with 18 decimals. At the time of writing, calling this on `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56` returns `500000000000000`, which corresponds to a 0.05% swap fee.&#x20;
+Values are returned with 18 decimals. At the time of writing, calling this on `0x5c6ee304399dbdb9c8ef030ab642b10820db8f56` returns `500000000000000`, which corresponds to a 0.05% swap fee.
 
 #### Some Pools have Dynamic Swap Fees!
 

@@ -1,5 +1,9 @@
 # Encoding userData
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 There are some arguments that need to be encoded when interacting with Balancer V2 Smart Contracts. For convenience, this page provides an example of how to encode arguments.
 
 {% tabs %}

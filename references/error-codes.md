@@ -6,6 +6,10 @@ description: >-
 
 # Error Codes
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 All error codes for the Balancer V2 core contracts are defined in the [`BalancerErrors.sol`](https://github.com/balancer-labs/balancer-v2-monorepo/blob/master/pkg/solidity-utils/contracts/helpers/BalancerErrors.sol) contract.
 
 ## Math

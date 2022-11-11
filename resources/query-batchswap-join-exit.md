@@ -1,5 +1,9 @@
 # query{BatchSwap,Join,Exit}
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## Overview
 
 In many scenarios, you might want to know how much X of TokenA you'll receive for Y of TokenB. Fortunately, Balancer has query functions to simulate transactions.
@@ -12,7 +16,7 @@ If you look on Etherscan (or similar), all three of the query functions will sho
 
 ### Be very careful if you call `query*` from a contract!!!
 
-If you are using `queryBatchSwap`, `queryJoin`, or `queryExit` to calculate `limits`,  `maxAmountsIn`, or `minAmountsOut`, this is ONLY useful if you simulate these calls OUTSIDE of the transaction you end up making. You SHOULD NOT call these functions to calculate limits from a smart contract at transaction time.
+If you are using `queryBatchSwap`, `queryJoin`, or `queryExit` to calculate `limits`, `maxAmountsIn`, or `minAmountsOut`, this is ONLY useful if you simulate these calls OUTSIDE of the transaction you end up making. You SHOULD NOT call these functions to calculate limits from a smart contract at transaction time.
 
 There are valid use cases for calling these functions on chain, but **do not use them to determine limits**.
 
@@ -23,9 +27,9 @@ Calculating these values ahead of time is useful for enforcing slippage toleranc
 ## Queries
 
 {% hint style="info" %}
-### Are you trying to calculate amounts for a pool that uses Phantom BPT?
+#### Are you trying to calculate amounts for a pool that uses Phantom BPT?
 
-**\*LinearPools** and **StablePhantomPools** do not have join or exit functionality since those are handled as swaps! For example, if you want to figure out how much `bb-a-USD` you'll get for an amount of `DAI`, you'll need to use `queryBatchSwap` on a trade route that swaps `DAI` for `bb-a-DAI` and then swaps `bb-a-DAI` for `bb-a-USD`.&#x20;
+**\*LinearPools** and **StablePhantomPools** do not have join or exit functionality since those are handled as swaps! For example, if you want to figure out how much `bb-a-USD` you'll get for an amount of `DAI`, you'll need to use `queryBatchSwap` on a trade route that swaps `DAI` for `bb-a-DAI` and then swaps `bb-a-DAI` for `bb-a-USD`.
 {% endhint %}
 
 ### `queryBatchSwap`

@@ -1,6 +1,10 @@
 # Subgraphs
 
-The Balancer Subgraph indexes data on the Balancer smart contracts with a GraphQL interface.  It updates data in response to function calls and contract events to maintain data on the `Vault`, `Pools`,  `AssetManagers` etc, to power front-end apps and integrations.
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
+The Balancer Subgraph indexes data on the Balancer smart contracts with a GraphQL interface. It updates data in response to function calls and contract events to maintain data on the `Vault`, `Pools`, `AssetManagers` etc, to power front-end apps and integrations.
 
 {% hint style="warning" %}
 Note that Balancer has not yet migrated to the new Subgraph Studio mainnet. Any Balancer subgraphs appearing there should not be considered "official" deployments. Use at your own risk!
@@ -15,9 +19,9 @@ Note that Balancer has not yet migrated to the new Subgraph Studio mainnet. Any 
 
 ### GraphQL Schema
 
-The schema of GraphQL elements available is defined in [`/schema.graphql` ](https://github.com/balancer-labs/balancer-subgraph-v2/blob/master/schema.graphql)
+The schema of GraphQL elements available is defined in [`/schema.graphql`](https://github.com/balancer-labs/balancer-subgraph-v2/blob/master/schema.graphql)
 
-The data included in this subgraph data layer is the data that is most applicable to the front-end. It aims at the very least to keep track of all the resources in the  `Vault` contract, and keep track of basic pool data.
+The data included in this subgraph data layer is the data that is most applicable to the front-end. It aims at the very least to keep track of all the resources in the `Vault` contract, and keep track of basic pool data.
 
 ### Querying
 
