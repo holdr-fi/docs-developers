@@ -1,5 +1,9 @@
 # Welcome
 
+{% hint style="info" %}
+<mark style="color:red;">**This page is a work in progress. If you want to help us to make this page better, please consider contributing on GitHub.**</mark>
+{% endhint %}
+
 ## #BuiltOnBalancer
 
 These docs are intended for anyone who is interfacing with or building on top of Balancer. Whether you're a trade aggregator, yield aggregator, trader, liquidity provider, founder, web dev, arbitrageur, AMM designer, mathematician, or curious individual, this is the place for you.
